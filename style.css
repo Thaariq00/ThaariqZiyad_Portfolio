@@ -1,51 +1,174 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 *{
-    padding: 0%;
-    margin: 0%;
-    box-sizing: border-box;
     font-family: 'Popins', sans-serif;
     text-decoration: none;
     list-style: none;
 }
 
+
+
 body{
+    flex-grow: 1;
     background-color: rgb(152, 184, 196);
     background-position: center;
     background-size: cover;
-    color: rgb(249, 249, 249);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Make the wrapper full height of the viewport */
+}
+
+header{
+    width: 100%;
+    margin-top: 5px;
+    text-align-last: center;
+    padding: 15px;
+    box-shadow: 0 0 12px rgb(28, 41, 190);
+    text-shadow: 2px 2px 8px rgb(28, 41, 190);
 }
 
 .navibar{
+    margin-top: 15px;
+    width: 100%;
     display: flex;
+    font-size: 30px;
     align-items: center;
     position: relative;
     padding: 15px;
-    justify-content: space-between;
-    box-shadow: 0 0 12px rgb(65, 62, 57);
+    justify-content: center;
+    box-shadow: 0 0 12px rgb(28, 41, 190);
 }
 
-.navibar h1{
-    font-size: 25px;
-    font-weight: 1000;
-    margin-left: 10px;
-}
 
 .navibar nav{
     display: flex;
     gap: 15px;
     margin-right: 25px;
+
 }
 
 .navibar a{
+    margin-inline: 30px;
     color:  rgb(249, 249, 249);
-    font-size: 16px;
+    font-size: 15px;
     font-weight: 650;
-    transition: .5s;
+    transition: .4s;
 }
 
 .navibar a:hover{
+    scale: 1.2;
     filter: drop-shadow();
-    color: blue;
+    color: rgb(74, 119, 203);
     text-decoration: underline;
+}
+
+.main_content {
+    margin-top: 20px;
+    padding: 0px 0px 10px 140px;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Vertically center items */
+    gap: 100px; /* Space between text and image */
+    justify-content: center;
+}
+
+.main_text{
+    font-size: larger;
+    padding: 20px;
+    justify-content: center;
+}
+
+.main_image{
+    justify-content: center;
+    padding: 30px;
+}
+.main_image img {
+    max-width: 400px; /* Image will take 50% of its parent's width */
+    height: 400px; /* Maintain aspect ratio */
+}
+
+.social_icons{
+    padding-left: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.logo{
+    padding-left: 20px;
+    width: 70px;
+    height: auto;
+    transition: transform .5s;
+}
+
+.instalogo{
+    padding-left: 10px;
+    width: 125px;
+    height: auto;
+    transition: transform .5s;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+}
+
+.instalogo:hover{
+    transform: scale(1.1);
+}
+
+footer{
+    background-color: #333;
+    color: white;
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+@media screen and (max-width: 1200px) {
+    .navibar {
+        margin: 20px 0; /* Adjusted for better spacing */
+    }
+    .main_content {
+        flex-direction: column; /* Stack image and text */
+        align-items: center;
+        margin: 0;
+    }
+
+    .main_image {
+        height: auto; /* Allow height to adjust */
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .navibar {
+        margin: 20px 0; /* Adjusted for better spacing */
+    }
+    .main_content {
+        flex-direction: column; /* Stack image and text */
+        align-items: center;
+        margin: 0;
+    }
+
+    .main_image {
+        height: auto; /* Allow height to adjust */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navibar {
+        margin: 20px 0; /* Adjusted for better spacing */
+    }
+    .main_content {
+        flex-direction: column; /* Stack image and text */
+        align-items: center;
+        margin: 0;
+    }
+
+    .main_image {
+        height: auto; /* Allow height to adjust */
+    }
 }
