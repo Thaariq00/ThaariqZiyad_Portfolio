@@ -1,14 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
-*{
-    font-family: 'Popins', sans-serif;
+* {
+    font-family: 'Poppins', sans-serif;
     text-decoration: none;
     list-style: none;
 }
 
-
-
-body{
+body {
     flex-grow: 1;
     background-color: rgb(152, 184, 196);
     background-position: center;
@@ -21,7 +19,7 @@ body{
     min-height: 100vh; /* Make the wrapper full height of the viewport */
 }
 
-header{
+header {
     width: 100%;
     margin-top: 5px;
     text-align-last: center;
@@ -30,7 +28,7 @@ header{
     text-shadow: 2px 2px 8px rgb(28, 41, 190);
 }
 
-.navibar{
+.navibar {
     margin-top: 15px;
     width: 100%;
     display: flex;
@@ -42,23 +40,21 @@ header{
     box-shadow: 0 0 12px rgb(28, 41, 190);
 }
 
-
-.navibar nav{
+.navibar nav {
     display: flex;
     gap: 15px;
     margin-right: 25px;
-
 }
 
-.navibar a{
+.navibar a {
     margin-inline: 30px;
-    color:  rgb(249, 249, 249);
+    color: rgb(249, 249, 249);
     font-size: 15px;
     font-weight: 650;
     transition: .4s;
 }
 
-.navibar a:hover{
+.navibar a:hover {
     scale: 1.2;
     filter: drop-shadow();
     color: rgb(74, 119, 203);
@@ -72,24 +68,26 @@ header{
     align-items: center; /* Vertically center items */
     gap: 100px; /* Space between text and image */
     justify-content: center;
+    flex-grow: 1; /* Allow this section to take up the remaining space */
 }
 
-.main_text{
+.main_text {
     font-size: larger;
     padding: 20px;
     justify-content: center;
 }
 
-.main_image{
+.main_image {
     justify-content: center;
     padding: 30px;
 }
+
 .main_image img {
     max-width: 400px; /* Image will take 50% of its parent's width */
     height: 400px; /* Maintain aspect ratio */
 }
 
-.social_icons{
+.social_icons {
     padding-left: 100px;
     display: flex;
     justify-content: center;
@@ -98,77 +96,82 @@ header{
     margin-bottom: 25px;
 }
 
-.logo{
+.logo {
     padding-left: 20px;
     width: 70px;
     height: auto;
     transition: transform .5s;
 }
 
-.instalogo{
+/* .instalogo {
     padding-left: 10px;
     width: 125px;
     height: auto;
     transition: transform .5s;
-}
+} */
 
-.logo:hover{
+.logo:hover {
     transform: scale(1.1);
 }
-
-.instalogo:hover{
+/* 
+.instalogo:hover {
     transform: scale(1.1);
-}
+} */
 
-footer{
+footer {
     background-color: #333;
     color: white;
     margin: 0;
     padding: 10px;
+    width: 100%;
     text-align: center;
+    margin-top: auto; /* Pushes the footer to the bottom of the flex container */
 }
 
-@media screen and (max-width: 1200px) {
-    .navibar {
-        margin: 20px 0; /* Adjusted for better spacing */
-    }
-    .main_content {
-        flex-direction: column; /* Stack image and text */
+
+/* iPhone SE screen size */
+@media (max-width: 768px) {
+    .navibar nav {
+        flex-direction: column;
         align-items: center;
-        margin: 0;
+    }
+    
+    .navibar a {
+        margin-inline: 0;
+        margin-bottom: 10px;
+        font-size: 14px;
     }
 
-    .main_image {
-        height: auto; /* Allow height to adjust */
-    }
-}
-
-@media screen and (max-width: 992px) {
-    .navibar {
-        margin: 20px 0; /* Adjusted for better spacing */
-    }
     .main_content {
-        flex-direction: column; /* Stack image and text */
-        align-items: center;
-        margin: 0;
+        flex-direction: column;
+        padding: 0;
+        gap: 20px;
+        text-align: center;
     }
 
-    .main_image {
-        height: auto; /* Allow height to adjust */
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .navibar {
-        margin: 20px 0; /* Adjusted for better spacing */
-    }
-    .main_content {
-        flex-direction: column; /* Stack image and text */
-        align-items: center;
-        margin: 0;
+    .main_text {
+        font-size: medium;
+        padding: 10px;
     }
 
-    .main_image {
-        height: auto; /* Allow height to adjust */
+    .main_image img {
+        max-width: 250px;
+        height: auto;
+    }
+
+    .social_icons {
+        padding-left: 0;
+        gap: 5px;
+    }
+
+    .logo,
+    .instalogo {
+        width: 50px;
+        height: auto;
+    }
+
+    footer {
+        font-size: 12px;
+        padding: 5px;
     }
 }
