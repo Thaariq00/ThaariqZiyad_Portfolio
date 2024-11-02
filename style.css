@@ -8,10 +8,7 @@
 
 body {
     width: 100%;
-    flex-grow: 1;
     background-color: rgb(152, 184, 196);
-    background-position: center;
-    background-size: cover;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -20,10 +17,12 @@ body {
 
 header {
     width: 100%;
-    margin-top: 5px;
-    text-align-last: center;
+    display: flex;
+    font-size: 20px;
+    align-items: center;
     padding: 15px;
-    box-shadow: 0 0 12px rgb(28, 41, 190);
+    justify-content: center;
+    box-shadow: 0 12px 12px rgb(28, 41, 190);
     text-shadow: 2px 2px 8px rgb(28, 41, 190);
 }
 
@@ -111,6 +110,7 @@ header {
     margin: 20px auto 20px auto;
     max-width: 600px;
     justify-items: center;
+    justify-content: center;
     padding: 20px;
     background-color: rgba(173, 216, 230, 0.3);
     border-radius: 8px;
@@ -122,6 +122,7 @@ header {
     margin-bottom: 10px;
     color: black;
     text-decoration: underline;
+    text-shadow: 2px 2px 8px rgb(28, 41, 190);
 }
 
 #contact_Form{
@@ -132,10 +133,11 @@ header {
     padding: 20px;
 }
 
-#contact_Form label{
+#contact_Form > label{
     font-weight: bold;
     margin-top: 15px;
     margin-bottom: 5px;
+    text-shadow: 2px 2px 8px rgb(28, 41, 190);
 }
 
 #contact_Form input[type="text"],#contact_Form input[type="email"],#contact_Form textarea{
@@ -154,6 +156,7 @@ input[required]{
     width: 100px;
     border-radius: 10px;
     box-shadow: 4px 4px rgb(28, 41, 190);
+    text-shadow: 2px 2px 8px rgb(28, 41, 190);
 
 }
 
@@ -170,6 +173,43 @@ input[required]{
 #about p{
     justify-content: center;
     text-align: center;
+}
+
+#blog{
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+}
+
+#blog h2{
+    margin-bottom: 45px;
+}
+
+#blog h3{
+    text-decoration: underline;
+}
+
+.blog_Post{
+    max-width: 80% ;
+    margin-bottom: 5em;
+}
+
+
+.blog_Post p::first-letter{
+    font-size: 2em;
+}
+
+.blog_Post :nth-child(odd){
+    color: rgb(196, 194, 194);
+    background-color: #3b3a6b;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.blog_Post :nth-child(even){
+    background-color: #6564b0;
+    padding: 10px;
+    border-radius: 8px;
 }
 
 
