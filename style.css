@@ -173,20 +173,13 @@ input:invalid {
     margin: auto;
     justify-content: center;
     text-align: center;
+    padding-bottom: 30px;
 }
 
 
-.aboout_Photo{
+.about_Photo{
     text-align: center;
     margin: 20px;
-}
-
-.aboout_Photo img{
-    max-width: 100%;
-    justify-items: center;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
 }
 
 #blog{
@@ -195,15 +188,11 @@ input:invalid {
     text-align: center;
 }
 
-#blog h2{
-    margin-bottom: 45px;
-}
-
 
 
 .blog_Post{
     max-width: 80% ;
-    margin-bottom: 5em;
+    margin-bottom: 20px;
     text-align: justify;
 }
 
@@ -230,17 +219,13 @@ h3{
 }
 
 
-
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
 
-br{
-    margin: 20px;
-    padding-top: 10px;
-}
+
 
 
 
@@ -290,8 +275,7 @@ footer {
         gap: 5px;
     }
 
-    .logo,
-    .instalogo {
+    .logo{
         width: 50px;
         height: auto;
     }
