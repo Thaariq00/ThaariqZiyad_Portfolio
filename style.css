@@ -132,6 +132,11 @@ h2{
     text-shadow: 2px 2px 8px rgb(28, 41, 190);
 }
 
+h3{
+    text-align: center;
+}
+
+
 /* layout of the contact form */
 #contact_Form{
     width: 80%;
@@ -232,9 +237,6 @@ input:invalid {
     border-radius: 8px;
 }
 
-h3{
-    text-align: center;
-}
 
 /* for the animation */
 @keyframes fadeIn {
@@ -279,7 +281,7 @@ footer {
         padding: 10px;
     }
 
-    .main_image img {
+    .main_image img, .about_Photo img {
         max-width: 250px;
         height: auto;
     }
