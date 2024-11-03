@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
+/* Basic Styling for all pages */
 * {
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
     list-style: none;
 }
-
+/* body styling */
 body {
     width: 100%;
     background-color: rgb(152, 184, 196);
@@ -16,6 +17,7 @@ body {
     animation: fadeIn 1s ease-in;
 }
 
+/* header styling */
 header {
     width: 100%;
     display: flex;
@@ -27,6 +29,7 @@ header {
     text-shadow: 2px 2px 8px rgb(28, 41, 190);
 }
 
+/* navigation bar styling */
 .navibar {
     width: 100%;
     display: flex;
@@ -39,6 +42,7 @@ header {
     box-shadow: 0 0 12px rgb(28, 41, 190);
 }
 
+/* Styling for the words/buttons in the navigation bar */
 .navibar nav {
     display: flex;
     gap: 15px;
@@ -60,29 +64,32 @@ header {
     text-decoration: underline;
 }
 
+/* Styling for content in the main page */
 .main_content {
     margin-top: 20px;
     padding: 0px 0px 10px 140px;
     display: flex; 
-    align-items: center; /* Vertically center items */
-    gap: 100px; /* Space between text and image */
+    align-items: center; 
+    gap: 100px;
     justify-content: center;
     flex-grow: 1; 
 }
 
+/* Styling for the text in the main page */
 .main_text {
     font-size: larger;
     padding: 20px;
     justify-content: left;
 }
 
-
+/* Styling the image in main page */
 .main_image img {
     max-width: 400px; /* Image will take 50% of its parent's width */
     height: 400px; 
     padding: 20px;
 }
 
+/* Styling the links for main page */
 .social_icons {
     padding-left: 100px;
     display: flex;
@@ -92,6 +99,7 @@ header {
     margin-bottom: 25px;
 }
 
+/* styling the logos of the links */
 .logo {
     padding-left: 20px;
     width: 70px;
@@ -103,6 +111,7 @@ header {
     transform: scale(1.1);
 }
 
+/* Styling the contact section */
 #contact{
     width: 80%;
     margin: 20px auto 20px auto;
@@ -123,6 +132,7 @@ h2{
     text-shadow: 2px 2px 8px rgb(28, 41, 190);
 }
 
+/* layout of the contact form */
 #contact_Form{
     width: 80%;
     display: flex;
@@ -131,6 +141,7 @@ h2{
     padding: 20px;
 }
 
+/* Styling of the labels using child combinators */
 #contact_Form > label{
     font-weight: bold;
     margin-top: 15px;
@@ -138,26 +149,31 @@ h2{
     text-shadow: 2px 2px 8px rgb(28, 41, 190);
 }
 
+/* Styling the textbox area in the form */
 #contact_Form input[type="text"],#contact_Form input[type="email"],#contact_Form textarea{
     background-color: rgb(239, 239, 239);
     border-radius: 10px;
     padding: 5px;
 }
 
+/* styling when an input is required */
 input[required]{
     box-shadow: 4px 4px rgb(28, 41, 190);
 }
 
+/* styling when the input's criteria is met with pseudo classes */
 input:valid {
     border: 3px solid;
     border-color: #66bb6a;
 }
 
+/* styling when the input's criteria is not met using pseudo classes*/
 input:invalid {
     border: 3px solid;
     border-color: #e57373;
 }
 
+/* Styling of the send button in the form */
 #contact_Submit{
     margin-top: 30px;
     width: 100px;
@@ -167,7 +183,7 @@ input:invalid {
 
 }
 
-
+/* Styling the about page */
 #about p{
     max-width: 80%;
     margin: auto;
@@ -176,12 +192,13 @@ input:invalid {
     padding-bottom: 30px;
 }
 
-
+/* Aligning  the image in about page*/
 .about_Photo{
     text-align: center;
     margin: 20px;
 }
 
+/* Styling of the blog page */
 #blog{
     justify-content: center;
     justify-items: center;
@@ -189,18 +206,19 @@ input:invalid {
 }
 
 
-
+/* Styling of the blog posts */
 .blog_Post{
     max-width: 80% ;
     margin-bottom: 20px;
     text-align: justify;
 }
 
-
+/* Pseudo element to make the first letter of each blog post bigger */
 .blog_Post p::first-letter{
     font-size: 2em;
 }
 
+/* Stling using n-th child selectors */
 .blog_Post :nth-child(odd){
     color: rgb(196, 194, 194);
     background-color: #3b3a6b;
@@ -218,17 +236,13 @@ h3{
     text-align: center;
 }
 
-
+/* for the animation */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
-
-
-
-
-
+/* Styling of the footer */
 footer {
     background-color: #333333;
     color: white;
@@ -240,7 +254,7 @@ footer {
 }
 
 
-/* iPhone SE screen size */
+/* iPhone SE screen size for it to be responsive until smallest screen size */
 @media (max-width: 768px) {
     .navibar nav {
         flex-direction: column;
